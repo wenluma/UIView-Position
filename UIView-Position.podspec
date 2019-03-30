@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/wenluma/UIView-Position'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wenluma' => 'wenlua_521@163.com' }
+  s.author           = { 'wenluma' => 'wenluma_521@163.com' }
   s.source           = { :git => 'https://github.com/wenluma/UIView-Position.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

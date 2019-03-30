@@ -22,7 +22,7 @@ pod 'UIView-Position'
 
 ## Author
 
-wenluma, gaoliang5@staff.sina.com.cn
+wenluma, wenluma_521@163.com
 
 ## License
 
