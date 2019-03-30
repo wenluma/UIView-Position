@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - UIView-Position (0.1.0)
+  - UIView-Position (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  UIView-Position: a31da129516c8456621c7b8fe0807ffd91a6867f
+  UIView-Position: d7d5d67628e9cc76d0f77669241fd1b62100bc14
 
 PODFILE CHECKSUM: eba45fa079647e24a31388cdc2c80ad4dac95006
 
