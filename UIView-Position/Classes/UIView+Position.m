@@ -2,6 +2,50 @@
 
 @implementation UIView (Position)
 
+- (void)setMarginInsets:(UIEdgeInsets)marginInsets {
+    self.marginTop = marginInsets.top;
+    self.marginLeft = marginInsets.left;
+    self.marginBottom = marginInsets.bottom;
+    self.marginRight = marginInsets.right;
+}
+
+- (UIEdgeInsets)marginInsets {
+    return UIEdgeInsetsMake(self.marginTop, self.marginLeft, self.marginBottom, self.marginRight);
+}
+
+
+- (CGFloat)marginLeft {
+    return self.left;
+}
+
+- (void)setMarginLeft:(CGFloat)marginLeft {
+    self.left = self.superview.left + marginLeft;
+}
+
+- (CGFloat)marginRight {
+    return self.superview.width - self.right;
+}
+
+- (void)setMarginRight:(CGFloat)marginRight {
+    self.width = self.superview.width - marginRight - self.marginLeft;
+}
+
+- (CGFloat)marginTop {
+    return self.top;
+}
+
+- (void)setMarginTop:(CGFloat)marginTop {
+    self.top = marginTop;
+}
+
+- (CGFloat)marginBottom {
+    return self.superview.height - self.bottom;
+}
+
+- (void)setMarginBottom:(CGFloat)marginBottom {
+    self.height = self.superview.height - self.marginTop - marginBottom;
+}
+
 - (CGFloat)left {
 	return CGRectGetMinX(self.frame);
 }
@@ -69,7 +113,7 @@
 }
 
 - (CGFloat)height {
-	return CGRectGetWidth(self.frame);
+	return CGRectGetHeight(self.frame);
 }
 
 - (void)setHeight:(CGFloat)height {

@@ -1,15 +1,15 @@
 {
   "name": "UIView-Position",
   "version": "0.1.0",
-  "summary": "A short description of UIView-Position.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "convenient modify UIView frame by UIView-Position.",
+  "description": "support left, right, top, bottom, centerX, centerY , and so on",
   "homepage": "https://github.com/wenluma/UIView-Position",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "wenluma": "gaoliang5@staff.sina.com.cn"
+    "wenluma": "wenluma_521@163.com"
   },
   "source": {
     "git": "https://github.com/wenluma/UIView-Position.git",

@@ -2,6 +2,36 @@
 
 @interface UIView (Position)
 
+@property (nonatomic) UIEdgeInsets marginInsets;
+/**
+ * Dependent superview
+ *
+ * Sets marginLeft = self.left
+ */
+@property (nonatomic) CGFloat marginLeft;
+
+/**
+ * Dependent superview
+ *
+ * Sets modify  width = superview.width - marginRight - marginLeft;
+
+ */
+@property (nonatomic) CGFloat marginRight;
+
+/**
+ * Dependent superview
+ *
+ * Sets frame.origin.y = superview.top - marginTop
+ */
+@property (nonatomic) CGFloat marginTop;
+
+/**
+ * Dependent superview
+ *
+ * Sets height = superview.height - marginTop - marginBottom
+ */
+@property (nonatomic) CGFloat marginBottom;
+
 /**
  * Shortcut for frame.origin.x.
  *
