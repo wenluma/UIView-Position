@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'UIView-Position'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of UIView-Position.'
+  s.summary          = 'convenient modify UIView frame by UIView-Position.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  support left, right, top, bottom, centerX, centerY , and so on
                        DESC
 
   s.homepage         = 'https://github.com/wenluma/UIView-Position'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wenluma' => 'gaoliang5@staff.sina.com.cn' }
+  s.author           = { 'wenluma' => 'wenlua_521@163.com' }
   s.source           = { :git => 'https://github.com/wenluma/UIView-Position.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
