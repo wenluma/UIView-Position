@@ -1,49 +1,64 @@
 #import "UIView+Position.h"
+#import <objc/runtime.h>
 
 @implementation UIView (Position)
 
+
 - (void)setMarginInsets:(UIEdgeInsets)marginInsets {
-    self.marginTop = marginInsets.top;
-    self.marginLeft = marginInsets.left;
-    self.marginBottom = marginInsets.bottom;
-    self.marginRight = marginInsets.right;
+//    NSValue
+    objc_setAssociatedObject(self, @selector(marginInsets), [NSValue valueWithUIEdgeInsets:marginInsets], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.frame = UIEdgeInsetsInsetRect(self.superview.bounds, marginInsets);
 }
 
 - (UIEdgeInsets)marginInsets {
-    return UIEdgeInsetsMake(self.marginTop, self.marginLeft, self.marginBottom, self.marginRight);
+    NSValue *edge = objc_getAssociatedObject(self, @selector(marginInsets));
+    if (edge == nil) return UIEdgeInsetsZero;
+    return edge.UIEdgeInsetsValue;
 }
 
 
 - (CGFloat)marginLeft {
-    return self.left;
+    UIEdgeInsets edge = self.marginInsets;
+    return edge.left;
 }
 
 - (void)setMarginLeft:(CGFloat)marginLeft {
-    self.left = self.superview.left + marginLeft;
+    UIEdgeInsets edge = self.marginInsets;
+    edge.left = marginLeft;
+    self.marginInsets = edge;
 }
 
 - (CGFloat)marginRight {
-    return self.superview.width - self.right;
+    UIEdgeInsets edge = self.marginInsets;
+    return edge.right;
 }
 
 - (void)setMarginRight:(CGFloat)marginRight {
-    self.width = self.superview.width - marginRight - self.marginLeft;
+    UIEdgeInsets edge = self.marginInsets;
+    edge.right = marginRight;
+    self.marginInsets = edge;
 }
 
 - (CGFloat)marginTop {
-    return self.top;
+    UIEdgeInsets edge = self.marginInsets;
+    return edge.top;
 }
 
 - (void)setMarginTop:(CGFloat)marginTop {
-    self.top = marginTop;
+    UIEdgeInsets edge = self.marginInsets;
+    edge.top = marginTop;
+    self.marginInsets = edge;
 }
 
 - (CGFloat)marginBottom {
-    return self.superview.height - self.bottom;
+    UIEdgeInsets edge = self.marginInsets;
+    return edge.bottom;
 }
 
 - (void)setMarginBottom:(CGFloat)marginBottom {
-    self.height = self.superview.height - self.marginTop - marginBottom;
+    UIEdgeInsets edge = self.marginInsets;
+    edge.bottom = marginBottom;
+    self.marginInsets = edge;
 }
 
 - (CGFloat)left {
