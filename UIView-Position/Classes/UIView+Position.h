@@ -2,6 +2,14 @@
 
 @interface UIView (Position)
 
+// MARK:  multiplier
+// [0, 1.0] multiplierX = self.width / super.width;, modify width
+@property (nonatomic) CGFloat multiplierAxisX;
+
+// [0, 1.0] multiplierY = self.height / super.height; , modify height
+@property (nonatomic) CGFloat multiplierAxisY;
+
+//MARK: margin -
 @property (nonatomic) UIEdgeInsets marginInsets;
 /**
  * Dependent superview
@@ -31,7 +39,7 @@
  * Sets height = superview.height - marginTop - marginBottom
  */
 @property (nonatomic) CGFloat marginBottom;
-
+//MARK: left, top, rigth ,bottom -
 /**
  * Shortcut for frame.origin.x.
  *

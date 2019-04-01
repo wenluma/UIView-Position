@@ -3,11 +3,20 @@
 
 @implementation UIView (Position)
 
+- (CGFloat)multiplierAxisX {
+    return self.width / self.superview.width;
+}
 
-- (void)setMarginInsets:(UIEdgeInsets)marginInsets {
-//    NSValue
-    objc_setAssociatedObject(self, @selector(marginInsets), [NSValue valueWithUIEdgeInsets:marginInsets], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    self.frame = UIEdgeInsetsInsetRect(self.superview.bounds, marginInsets);
+- (void)setMultiplierAxisX:(CGFloat)multiplierAxisX {
+    self.width = self.superview.width * MIN(1.0, ABS(multiplierAxisX));
+}
+
+- (CGFloat)multiplierAxisY {
+    return self.height / self.superview.height;
+}
+
+- (void)setMultiplierAxisY:(CGFloat)multiplierAxisY {
+    self.height = self.superview.height * MIN(1.0, ABS(multiplierAxisY));
 }
 
 - (UIEdgeInsets)marginInsets {
@@ -16,6 +25,10 @@
     return edge.UIEdgeInsetsValue;
 }
 
+- (void)setMarginInsets:(UIEdgeInsets)marginInsets {
+    objc_setAssociatedObject(self, @selector(marginInsets), [NSValue valueWithUIEdgeInsets:marginInsets], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.frame = UIEdgeInsetsInsetRect(self.superview.bounds, marginInsets);
+}
 
 - (CGFloat)marginLeft {
     UIEdgeInsets edge = self.marginInsets;

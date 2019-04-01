@@ -23,7 +23,10 @@
     
     UILabel *lab = [[UILabel alloc] init];
     [self.view addSubview:lab];
-    lab.marginInsets = UIEdgeInsetsMake(10, 80, 10, 80);
+    lab.multiplierAxisX = 0.8;
+    lab.multiplierAxisY = 0.8;
+	lab.center = self.view.center;
+//    lab.marginInsets = UIEdgeInsetsMake(10, 80, 10, 80);
 //    lab.marginTop = 80;
 //    lab.marginLeft = 10;
 //    lab.marginRight = 10;
