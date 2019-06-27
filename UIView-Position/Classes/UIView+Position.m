@@ -170,6 +170,22 @@
 	self.frame = frame;
 }
 
+- (void)setHalfHeight:(CGFloat)halfHeight {
+    self.height = halfHeight * 2;
+}
+
+- (CGFloat)halfHeight {
+    return self.height / 2.f;
+}
+
+- (void)setHalfWidth:(CGFloat)halfWidth {
+    self.width = halfWidth * 2.f;
+}
+
+- (CGFloat)halfWidth {
+    return self.width / 2.f;
+}
+
 - (UIViewController*)viewController {
 	for (UIView* next = [self superview]; next; next = next.superview) {
 		UIResponder* nextResponder = [next nextResponder];

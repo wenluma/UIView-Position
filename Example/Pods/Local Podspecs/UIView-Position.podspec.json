@@ -1,6 +1,6 @@
 {
   "name": "UIView-Position",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "convenient modify UIView frame by UIView-Position.",
   "description": "support left, right, top, bottom, centerX, centerY , and so on",
   "homepage": "https://github.com/wenluma/UIView-Position",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/wenluma/UIView-Position.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "8.0"

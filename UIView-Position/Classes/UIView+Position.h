@@ -107,6 +107,16 @@
 @property (nonatomic) CGSize size;
 
 /**
+ * halfHeight = self.height / 2
+ */
+@property (nonatomic) CGFloat halfHeight;
+
+/**
+ * halfWidth = self.width / 2
+ */
+@property (nonatomic) CGFloat halfWidth;
+
+/**
  * The view controller whose view contains this view.
  */
 - (UIViewController*)viewController;
